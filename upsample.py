@@ -77,10 +77,6 @@ def bicubic_weight(x: float, a: float = -0.5) -> float:
         return 0
 
 
-def cv2_PSNR(src: np.ndarray, dst: np.ndarray) -> float:
-    return cv2.PSNR(src, dst)
-
-
 def cv2_nearest_interpolation(img: np.ndarray, dstH: int, dstW: int) -> np.ndarray:
     return cv2.resize(img, (dstH, dstW), interpolation=cv2.INTER_NEAREST)
 
