@@ -1,0 +1,42 @@
+{
+    "barb.bmp": {
+        "nearest_interpolation": 22.112067760852998,
+        "bilinear_interpolation": 24.208368964880158,
+        "bicubic_interpolation": 24.26580163848543,
+        "cv2_nearest_interpolation": 22.41007225230641,
+        "cv2_bilinear_interpolation": 23.905382612008154,
+        "cv2_bicubic_interpolation": 23.08888510220075
+    },
+    "boat.bmp": {
+        "nearest_interpolation": 24.805388586090928,
+        "bilinear_interpolation": 27.156780695902377,
+        "bicubic_interpolation": 29.47976051722284,
+        "cv2_nearest_interpolation": 26.208839332777774,
+        "cv2_bilinear_interpolation": 27.935225341762894,
+        "cv2_bicubic_interpolation": 27.59431697342879
+    },
+    "lena.bmp": {
+        "nearest_interpolation": 26.129752062254347,
+        "bilinear_interpolation": 28.1681168062631,
+        "bicubic_interpolation": 31.678050755991798,
+        "cv2_nearest_interpolation": 28.291807987524994,
+        "cv2_bilinear_interpolation": 30.200937085001463,
+        "cv2_bicubic_interpolation": 29.999357647144684
+    },
+    "mandrill.bmp": {
+        "nearest_interpolation": 20.43081320800137,
+        "bilinear_interpolation": 22.80196001236371,
+        "bicubic_interpolation": 22.729556062423203,
+        "cv2_nearest_interpolation": 20.36371818747119,
+        "cv2_bilinear_interpolation": 21.680044503229688,
+        "cv2_bicubic_interpolation": 21.18221061386254
+    },
+    "peppers-bw.bmp": {
+        "nearest_interpolation": 25.099115121266426,
+        "bilinear_interpolation": 27.519822441503827,
+        "bicubic_interpolation": 30.34342785446801,
+        "cv2_nearest_interpolation": 26.936167335914455,
+        "cv2_bilinear_interpolation": 28.821602345763957,
+        "cv2_bicubic_interpolation": 28.542992944076385
+    }
+}
