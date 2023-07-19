@@ -4,8 +4,12 @@ import cv2
 
 # 最近邻插值
 def nearest_interpolation(img: np.ndarray, dstH: int, dstW: int) -> np.ndarray:
-    scrH, scrW, _ = img.shape
-    retimg = np.zeros((dstH, dstW, 3), dtype=np.uint8)
+    if len(img.shape) == 2:
+        scrH, scrW = img.shape
+        c = 1
+    else:
+        scrH, scrW, c = img.shape
+    retimg = np.zeros((dstH, dstW, c), dtype=np.uint8)
     for i in range(dstH - 1):
         for j in range(dstW - 1):
             scrx = round(i * (scrH / dstH))
@@ -16,8 +20,12 @@ def nearest_interpolation(img: np.ndarray, dstH: int, dstW: int) -> np.ndarray:
 
 # 双线性插值
 def bilinear_interpolation(img: np.ndarray, dstH: int, dstW: int) -> np.ndarray:
-    scrH, scrW, _ = img.shape
-    retimg = np.zeros((dstH, dstW, 3), dtype=np.uint8)
+    if len(img.shape) == 2:
+        scrH, scrW = img.shape
+        c = 1
+    else:
+        scrH, scrW, c = img.shape
+    retimg = np.zeros((dstH, dstW, c), dtype=np.uint8)
     for i in range(dstH - 1):
         for j in range(dstW - 1):
             scrx = i * (scrH / dstH)
@@ -42,8 +50,12 @@ def bilinear_interpolation(img: np.ndarray, dstH: int, dstW: int) -> np.ndarray:
 
 # 双三次内插
 def bicubic_interpolation(img: np.ndarray, dst_h: int, dst_w: int) -> np.ndarray:
-    src_h, src_w, _ = img.shape
-    ret_img = np.zeros((dst_h, dst_w, 3), dtype=np.uint8)
+    if len(img.shape) == 2:
+        src_h, src_w = img.shape
+        c = 1
+    else:
+        src_h, src_w, c = img.shape
+    ret_img = np.zeros((dst_h, dst_w, c), dtype=np.uint8)
     for i in range(dst_h):
         for j in range(dst_w):
             src_x = i * (src_h / dst_h)
