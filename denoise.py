@@ -15,7 +15,7 @@ from scipy.ndimage import sobel
 def add_noise(img: np.ndarray, sigma=5) -> np.ndarray:
     noise = np.random.normal(0, sigma, img.shape)
     img_noise = img + noise
-    return img_noise
+    return img_noise.clip(0, 255).astype(np.uint8)
 
 
 def sobolev(g, lambda_):
